@@ -38,15 +38,13 @@ $(document).ready( () => {
 		slider.animate( {left: newLeftProperty}, 1000);				
 	});  // end click	
 
-	$('#image_list a').click( (e) => {
+	$('#image_list a').click( function(e) {
 		e.preventDefault();
 		const imageURL = $('#image');
-
 		const bigImage = $(this).attr('href');
 		imageURL.stop(true, true);
-
 		imageURL.animate({opacity: 0, marginLeft: '-=205'}, 1000, 
-			() => {
+			function() {
 				imageURL.attr('src', bigImage);
 				imageURL.css('margin-left', '310px');
 				imageURL.animate({opacity: 1, marginLeft: '-=205'}, 1000);
