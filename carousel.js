@@ -43,8 +43,6 @@ $(document).ready( () => {
 		const imageURL = $('#image');
 
 		const bigImage = $(this).attr('href');
-		console.log(bigImage);
-		console.log('booliallie');
 		imageURL.stop(true, true);
 
 		imageURL.animate({opacity: 0, marginLeft: '-=205'}, 1000, 
